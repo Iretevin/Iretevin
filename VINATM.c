@@ -1,6 +1,6 @@
 // THIS AN ATM SOFTWARE PROGRAM USING C LANGUAGE//
 //  THIS PROGRAM IS WRITTEN BY IRETE VINCENT//
-//DATE 11.05.2022.//
+//  DATE 11.05.2022.//
 //  THIS PROGRAM ASKS A USER TO ENTER HIS OR HER PIN FOR ATM CARD TRANSACTIONS//
 //  THIS PROGRAM ASKS A USER TO PRESS 1 FOR ATM TRANSACTIONS//
 //  THIS PROGRAM ASKS A USER TO PRESS 2 FOR ATM CARD ACTIVATION//
@@ -17,36 +17,36 @@
 #include <unistd.h>
 int maximum()
 {
-  char stop[10];
-  char end[10];
+  int stop;
+  int end;
   printf("\n PLEASE  WAIT WHY YOUR TRANSACTION IS PROCESSING !!!\n");
   sleep(2);
   printf("\n PLEASE TAKE YOUR CASH!!\n");
   printf("\n THANK YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &stop);
+  printf("\n PRESS 1 TO END THE TRANSACTION\n");
+  scanf("%d", &stop);
   printf("\n THANK YOU FOR BANKING WITH US\n");
-  printf("\n PRESS YES TO GO BACK TO THE MAIN MENU\n");
-  scanf("%s", &end);
+  printf("\n PRESS 2 TO GO BACK TO THE MAIN MENU\n");
+  scanf("%d", &end);
 }
 int minimum()
 {
-  char ok[5];
-  char stop[5];
-  char end[5];
-  printf("\n PRESS YES TO CONFIRM \n");
-  scanf("%s", ok);
+  int ok;
+  int stop;
+  int end;
+  printf("\n PRESS 1 TO CONFIRM \n");
+  scanf("%d", &ok);
   printf("\n PLEASE  WAIT WHY YOUR TRANSACTION IS PROCESSING !!!\n");
   sleep(2);
   printf("\n PLEASE TAKE YOUR CASH!!\n");
   printf("\n THANK YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END TRANSACTION\n");
-  scanf("%s", &stop);
+  printf("\n PRESS 2 TO END TRANSACTION\n");
+  scanf("%d", &stop);
   printf("\n THANK YOU FOR BANKING WITH US\n");
-  printf("\n PRESS YES TO GO BACK TO THE MAIN MENU\n");
-  scanf("%s", &end);
+  printf("\n PRESS 3 TO GO BACK TO THE MAIN MENU\n");
+  scanf("%d", &end);
 }
 int withdrawer()
 {
@@ -92,11 +92,11 @@ int withdrawer()
   default:
   printf("\n YOU HAVE NOT SELECETED ANY AMOUNT\n");
   break;
-
-  case 5:
   int other;
-  char ok[10];
+  int ok;
   int amount;
+  case 5:
+
   printf("\n PRESS 2 TO SELECT OTHER AMOUNT\n");
   scanf("%d", &other);
   printf("\n ENTER AMOUNT FROM 1000-19000 TO SELECT YOUR AMOUNT\n");
@@ -195,16 +195,17 @@ int withdrawer()
   }
 }
 int cardline()
+
 {
-  char no[5];
-  char yeso[5];
+  int no ;
+  int yeso ;
   printf("\n THANK YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &no);
+  printf("\n PRESS 1 TO END THE TRANSACTION\n");
+  scanf("%d", &no);
   printf("\n THANK YOU FOR BANKING WITH US\n");
-  printf("\n PRESS YES TO GO BACK TO THE MAIN MENU\n");
-  scanf("%s", &yeso);
+  printf("\n PRESS 2 TO GO BACK TO THE MAIN MENU\n");
+  scanf("%d", &yeso);
 }
 
 int mtncard()
@@ -294,23 +295,23 @@ int mtncard()
 }
 int card()
 {
-  char period[10];
-  char continual[10];
+  int period;
+  int continual;
   printf("\n THANK YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &period);
+  printf("\n PRESS 1 TO END THE TRANSACTION\n");
+  scanf("%d", &period);
   printf("\n THANK YOU FOR BANKING WITH US\n");
-  printf("\n PRESS YES TO GO BACK TO THE MAIN MENU\n");
-  scanf("%s", &continual);
+  printf("\n PRESS 2 TO GO BACK TO THE MAIN MENU\n");
+  scanf("%d", &continual);
 }
 
 int airtelcard()
 {
 
-  int period[5];
+  int period;
   int j;
-  char continual[5];
+  int continual;
   printf("\n YOU HAVE SELECTED AIRTEL REACHARGE CARD\n");
 
   int airtel[10] = {0, 3000, 1000, 500, 400, 300, 200, 100, 1500, 2000};
@@ -397,24 +398,24 @@ int airtelcard()
 
 int recharge()
 {
-  char nono[5];
-  char yesyes[5];
+  int nono;
+  int yesyes;
   printf("\n THANK YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &nono);
+  printf("\n PRESS 1 TO END THE TRANSACTION\n");
+  scanf("%d", &nono);
   printf("\n THANK YOU FOR BANKING WITH US\n");
-  printf("\n PRESS YES TO GO BACK TO THE MAIN MENU\n");
-  scanf("%s", &yesyes);
+  printf("\n PRESS 2 TO GO BACK TO THE MAIN MENU\n");
+  scanf("%d", &yesyes);
 }
 
 int mobilecard()
 {
-  char ndd[10];
+  int ndd;
   int ad;
   int mobil;
-  char nono[5];
-  char yesyes[5];
+  int nono;
+  int yesyes;
   int mobile[10] = {0, 3000, 1000, 500, 400, 300, 200, 100, 1500, 2000};
   int jj;
   for (jj = 0; jj < 10; jj++)
@@ -495,15 +496,15 @@ int mobilecard()
 }
 int rechargecard()
 {
-  char ending[5];
-  char carryon[5];
+  int ending;
+  int carryon;
   printf("\n THANK YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &ending);
+  printf("\n PRESS 1 TO END THE TRANSACTION\n");
+  scanf("%d", &ending);
   printf("\n THANK YOU FOR BANKING WITH US\n");
-  printf("\n PRESS YES TO GO BACK TO THE MAIN MENU\n");
-  scanf("%s", &carryon);
+  printf("\n PRESS 2 TO GO BACK TO THE MAIN MENU\n");
+  scanf("%d", &carryon);
   printf("\nTHANK YOU FOR BANKING WITH US\n");
 }
 
@@ -587,13 +588,13 @@ int glocard()
 int transfer()
 {
   int amt;
-  char account[20];
-  char confirmed[20];
-  char conform[5];
+  int account;
+  int confirmed;
+  int conform;
   int goon;
-  char ok[5];
+  int ok;
   int name;
-  char know[10];
+  int know;
   int bank;
 
   printf("\n YOU HAVE SELECTED CASH TRANSFER\n");
@@ -699,14 +700,13 @@ int transfer()
   }
 
   printf("\n ENTER THE RECEIPIANT ACCOUNT NUMBER:\n");
-  scanf("%s", &account);
-  printf("\n YOU HAVE ENTERED ACCOUNT NUMBER: %s\n", &account);
+  scanf("%d", &account);
+  printf("\n YOU HAVE ENTERED ACCOUNT NUMBER: %d\n", account);
   printf("\n PRESS 1 TO PROCEED:\n");
   scanf("%d", &goon);
   printf("\n ENTER THE AMOUNT YOU WANT TO TRANSFER:\n");
   scanf("%d", &amt);
   if (amt >= 119000)
-  
   {
     printf("\n INSUFFICIENT BALANCE\n");
     printf("\n YOUR  AVAILABLE ACCOUNT BALANCE IS\n");
@@ -721,21 +721,21 @@ int transfer()
   scanf("%d", &goon);
   sleep(2);
   printf("\n ACCOUNT NAME : EMMANUEL AFOLABI\n");
-  printf("\n RECEIPIANT ACCOUNT NUMBER: %s\n", account);
+  printf("\n RECEIPIANT ACCOUNT NUMBER: %d\n", account);
   printf("\n YOU ABOUT TO TRANSFER : %d \n", amt);
   printf("\n  DATE:9-05-2022\n");
   printf("\n TIME: 12:30pm\n");
   printf("\n DEAR CUSTOMER CHECK THE RECEIPIANT DETAILS BEFORE YOU CONFIRM\n");
-  printf("\n PRESS YES TO CONFIRM\n");
-  scanf("%s", &confirmed);
+  printf("\n PRESS 1 TO CONFIRM\n");
+  scanf("%d", &confirmed);
   sleep(3);
   printf("\n TRANSFER SUCCESSFUL!!!:\n");
   printf("\n THANK YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END:\n");
-  scanf("%s", &know);
-  printf("\n PRESS YES TO GO BACK TO THE MAIN MENU\n");
-  scanf("%s", &ok);
+  printf("\n PRESS 2 TO END:\n");
+  scanf("%d", &know);
+  printf("\n PRESS 3 TO GO BACK TO THE MAIN MENU\n");
+  scanf("%d", &ok);
 }
 int accountbalance()
 {
@@ -749,111 +749,111 @@ int accountbalance()
 
   printf("\n DEAR CUSTOMER YOUR ACCOUNT BALANCE IS...... \n");
 
-  printf("\n AVAILABLE BALANCE IS %2.f  120,000.45\n");
+  printf("\n AVAILABLE BALANCE IS   120,000.45\n");
 
-  printf("\n LEDGER ACCOUNT BALANCE IS %2.f 120 ,000.85\n");
+  printf("\n LEDGER ACCOUNT BALANCE IS  120 ,000.85\n");
 
   printf("\n THANK YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &known);
+  printf("\n PRESS 1 TO END THE TRANSACTION\n");
+  scanf("%d", &known);
   printf("\n THANK YOU FOR BANKING WITH US\n");
-  printf("\n PRESS YES TO GO BACK TO THE MAIN MENU\n");
-  scanf("%s", &unknown);
+  printf("\n PRESS 2 TO GO BACK TO THE MAIN MENU\n");
+  scanf("%d", &unknown);
 }
 
 int electricity()
 {
 
-  char number3[15];
+  int number3;
   int money;
-  char accept3[15];
-  char biller[10];
-  char bills[10];
+  int accept3;
+  int biller;
+  int bills;
 
   printf("\n PLEAES ENTER YOUR METER/SMARTCARD NUMBER\n");
-  scanf("%s", &number3);
+  scanf("%d", &number3);
   printf("\n ENTER THE AMOUNT YOU WANT TO PAY\n");
   scanf("%d", &money);
   printf("\n YOUR NAME IS OKEKE EMMANUEL\n");
-  printf("\n YOUR METER OR SMARTCARD NUMBER IS %s\n", number3);
+  printf("\n YOUR METER OR SMARTCARD NUMBER IS %d\n", number3);
   printf("\n THE AMOUNT YOU WANT TO PAY IS %d\n", money);
   printf("\n WAIT WHY YOUR TRANSACTION IS PROCESSING!!!!\n");
   sleep(2);
-  printf("\n PRESS ACCEPT TO CONFIRM YOUR TRANSACTION\n");
-  scanf("%s", &accept3);
+  printf("\n PRESS 1 TO CONFIRM YOUR TRANSACTION\n");
+  scanf("%d", &accept3);
   printf("\n THANKING YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &biller);
-  printf("\n PRESS YES TO GO  BACK TO THE MAIN MENU\n");
-  scanf("%s", &bills);
+  printf("\n PRESS 2 TO END THE TRANSACTION\n");
+  scanf("%d", &biller);
+  printf("\n PRESS 3 TO GO  BACK TO THE MAIN MENU\n");
+  scanf("%d", &bills);
 }
 int startimes()
 {
-  char number1[15];
-  char accept1[15];
-  char biller[15];
-  char bills[15];
+  int number1;
+  int accept1;
+  int biller;
+  int bills;
   printf("\n PLEAES ENTER YOUR SMARTCARD NUMBER\n");
-  scanf("%s", &number1);
+  scanf("%d", &number1);
   printf("\n WAIT WHY YOUR TRANSACTION IS PROCESSING!!!!\n");
   sleep(2);
   printf("\n YOUR NAME IS FRANK EDWARD\n");
-  printf("\n YOUR SMARTCARD NUMBER IS %s\n", number1);
+  printf("\n YOUR SMARTCARD NUMBER IS %d\n", number1);
   printf("\n  ONE MONTH SUBSCRIPTION\n");
-  printf("\n PRESS ACCEPT TO CONFIRM YOUR TRANSACTION\n");
-  scanf("%s", &accept1);
+  printf("\n PRESS 1 TO CONFIRM YOUR TRANSACTION\n");
+  scanf("%d", &accept1);
   printf("\n THANKING YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &biller);
-  printf("\n PRESS YES TO GO  BACK TO THE MAIN MENU\n");
-  scanf("%s", &bills);
+  printf("\n PRESS 2 TO END THE TRANSACTION\n");
+  scanf("%d", &biller);
+  printf("\n PRESS 3 TO GO  BACK TO THE MAIN MENU\n");
+  scanf("%d", &bills);
 }
 int gotv()
 {
-  char number1[15];
-  char accept1[15];
-  char biller[15];
-  char bills[15];
+  int number1;
+  int accept1;
+  int biller;
+  int bills;
   printf("\n PLEAES ENTER YOUR SMARTCARD NUMBER\n");
-  scanf("%s", &number1);
+  scanf("%d", &number1);
   printf("\n WAIT WHY YOUR TRANSACTION IS PROCESSING!!!!\n");
   sleep(2);
   printf("\n YOUR NAME IS ADAMS OMON\n");
-  printf("\n YOUR SMARTCARD NUMBER IS %s\n", number1);
+  printf("\n YOUR SMARTCARD NUMBER IS %d\n", number1);
   printf("\n  ONE MONTH SUBSCRIPTION\n");
-  printf("\n PRESS ACCEPT TO CONFIRM YOUR TRANSACTION\n");
-  scanf("%s", &accept1);
+  printf("\n PRESS 1 TO CONFIRM YOUR TRANSACTION\n");
+  scanf("%d", &accept1);
   printf("\n THANKING YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &biller);
-  printf("\n PRESS YES TO GO  BACK TO THE MAIN MENU\n");
-  scanf("%s", &bills);
+  printf("\n PRESS 2 TO END THE TRANSACTION\n");
+  scanf("%d", &biller);
+  printf("\n PRESS 3 TO GO  BACK TO THE MAIN MENU\n");
+  scanf("%d", &bills);
 }
 int dstv()
 {
-  char number[15];
-  char accept[15];
-  char biller[15];
-  char bills[15];
+  int number;
+  int accept;
+  int biller;
+  int bills;
   printf("\n PLEAES ENTER YOUR SMARTCARD NUMBER\n");
-  scanf("%s", &number);
+  scanf("%d", &number);
   printf("\n WAIT WHY YOUR TRANSACTION IS PROCESSING!!!!\n");
   sleep(2);
   printf("\n YOUR NAME IS OLUCHI EMMANUEL\n");
-  printf("\n YOUR SMARTCARD NUMBER IS %s\n", number);
+  printf("\n YOUR SMARTCARD NUMBER IS %d\n", number);
   printf("\n  ONE MONTH SUBSCRIPTION\n");
-  printf("\n PRESS ACCEPT TO CONFIRM YOUR TRANSACTION\n");
-  scanf("%s", &accept);
+  printf("\n PRESS 1 TO CONFIRM YOUR TRANSACTION\n");
+  scanf("%d", &accept);
   printf("\n THANKING YOU FOR BANKING WITH US\n");
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
-  printf("\n PRESS NO TO END THE TRANSACTION\n");
-  scanf("%s", &biller);
-  printf("\n PRESS YES TO GO  BACK TO THE MAIN MENU\n");
-  scanf("%s", &bills);
+  printf("\n PRESS 2 TO END THE TRANSACTION\n");
+  scanf("%d", &biller);
+  printf("\n PRESS 3 TO GO  BACK TO THE MAIN MENU\n");
+  scanf("%d", &bills);
 }
 
 int billpayment()
@@ -861,8 +861,8 @@ int billpayment()
   int master;
   int bill;
   int billing;
-  char bills[5];
-  char biller[5];
+  int bills;
+  int biller;
   printf("\n PRESS 1 FOR CABLE PAYMENT OF BILLS \n");
   printf("\n PRESS 2 FOR ELECTRICITY PAYMENT OF BILLS\n");
   scanf("%d", &master);
@@ -877,9 +877,10 @@ int billpayment()
     scanf("%d", &billing);
     switch (billing)
     {
+    int menu;
     case 1:
     printf("\n YOU HAVE SELECTED DSTV  PAYMENT OF BILLS\n");
-    int menu;
+   
     printf("\n  PLEASE SELECT FROM DSTV PACKAGES(MONTHLY)\n");
     printf("\n PRESS 1 FOR DSTV PREMIUM   >>21,000 \n");
     printf("\n PRESS 2 FOR DSTV COMPACT PLUS>> 14,250\n");
@@ -891,8 +892,8 @@ int billpayment()
     scanf("%d", &menu);
     switch (menu)
     {
-    char number[15];
-    char accept[10];
+    int number;
+    int accept;
     case 1:
     printf("\n YOU HAVE SELECTED PREMIUM PACKAGE\n");
     dstv();
@@ -1140,11 +1141,12 @@ int menuatm()
   scanf(" %d", &menu);
   switch (menu)
   {
-  case 1:
-
+  
     int atmtransaction;
     int moving;
     int pin1;
+    case 1:
+
     printf("\n YOU HAVE SELECTED ATM CARD TRNSACTIONS\n");
     sleep(2);
     printf("\n DEAR CUSTOMER WELCOME TO ZENITH BANK!!!\n");
@@ -1250,8 +1252,8 @@ int menuatm()
     break;
     int one;
     int pin2;
-    char no[5];
-    char yes[5];
+    int no;
+    int yes;
 
     case 2:
     printf("\n YOU HAVE SELECTED ATM CARD ACTIVATION\n");
@@ -1272,12 +1274,12 @@ int menuatm()
     sleep(2);
     printf("\n YOUR ATM CARD HAD BEEN SUCCESSFULL ACTIVATED \n");
     printf("\n THANK YOU FOR BANKING WITH US!!!\n");
-    printf("\n PRESS NO TO END TRANSACTION \n");
-    scanf("%s", &no);
+    printf("\n PRESS 1 TO END TRANSACTION \n");
+    scanf("%d", &no);
     printf("\n PLEASE TAKE YOUR ATM CARD\n");
     printf("\n PLEASE TAKE YOUR RECEIPT\n");
-    printf("\n PRESS YES TO GO BACK TO THE MAIN MENU\n");
-    scanf("%s", &yes);
+    printf("\n PRESS 2 TO GO BACK TO THE MAIN MENU\n");
+    scanf("%d", &yes);
     printf("\n THANK YOU FOR BANKING WITH US!!!\n");
     printf("\n PLEASE TAKE YOUR ATM CARD\n");
     break;
@@ -1286,18 +1288,18 @@ int menuatm()
     printf("\n YOU HAVE SELECTED CARDLESS TRANSACTIONS\n");
     int cardless;
     int carry;
-    char proceed[10];
+    int proceed;
     int bz;
     int accountT;
-    char phone[20];
-    char proce[20];
+    int phone;
+    int proce;
     printf("\n PRESS 2 TO CONTINUE\n");
     scanf("%d", &carry);
     printf("\n WELCOME TO ZENITH BANK\n");
     sleep(2);
     printf("\n  ENTER YOUR PIN (11 DIGITS PHONE NUMBER)\n");
-    scanf("%s", &phone);
-    printf("\n YOUR PHONE NUMBER IS %s \n", phone);
+    scanf("%d", &phone);
+    printf("\n YOUR PHONE NUMBER IS %d \n", phone);
     printf("\n PRESS 1 FOR SAVINGS ACCOUNT\n");
     printf("\n PRESS  2 FOR CURRENT ACCOUNT\n");
     scanf("%d", &accountT);
@@ -1322,8 +1324,8 @@ int menuatm()
     printf("\n PLEASE WAIT FOR 5 SECONDS\n");
     sleep(5);
     printf("\n REMOVE YOUR FINGER\n");
-    printf("\n PRESS PROCEED TO CONTINUE THE TRANSACTION \n");
-    scanf("%s", &proceed);
+    printf("\n PRESS 1 TO CONTINUE THE TRANSACTION \n");
+    scanf("%d", &proceed);
 
     printf("\n PRESS 1 FOR CARDLESS WITHDRAWER\n");
 
@@ -1370,7 +1372,6 @@ int menuatm()
     printf("\n PRESS 2 FOR AIRTEL REACHARGE CARD\n");
     printf("\n PRESS 3 FOR 9 MOBILE REACHARGE CARD\n");
     printf("\n PRESS 4 FOR GLO REACHARGE CARD\n");
-    printf("\n PRESS 2 TO CONTINUE\n");
     scanf("%d", &card);
     switch (card)
     {
@@ -1400,45 +1401,45 @@ int menuatm()
     }
 
     break;
-
-    case 1234:
-    char yess[5];
-    char nos[5];
+    int yess;
+    int nos;
     int cash;
     int two;
-    char deposit[10];
-    char amount3[20];
-    char deposite[15];
+    int deposit;
+    int amount3;
+    int deposite;
+    case 1234:
+
     printf("\n YOU HAVE SELECTED CASH DEPOSIT\n");
     printf("\n THIS ATM  ACCEPT 20000 AS THE HIGHEST DEPOSIT \n  AND IN MULTIPLES OF 1000 ONLY\n");
     printf("\n PRESS 2 TO CONTINUE\n");
     scanf("%d", &cash);
     printf("\n PLEASE ENTER THE ACCOUNT NUMBER YOU WANT TO DEPOSIT TO\n");
-    scanf("%s", &deposite);
+    scanf("%d", &deposite);
     printf("\n PLEASE WAIT WHY YOUR TRANSACTION IS PROCESSING!!!!!\n");
     sleep(2);
     printf("\n  THE ATM OPENS A CHANNEL WHERE YOU CAN PLACE YOUR MONEY\n");
     sleep(6);
     printf("\n PLEASE WAIT WHY YOUR TRANSACTION IS PROCESSING!!!!!\n");
     sleep(3);
-    printf("\n AMOUNT YOU WANT TO DEPOSIT : %s\n", amount3);
-    scanf("%s", &amount3);
+    printf("\n AMOUNT YOU WANT TO DEPOSIT : %d\n", amount3);
+    scanf("%d", &amount3);
     printf("\n PRESS 2 TO CONTINUE\n");
     scanf("%d", &two);
     sleep(2);
-    printf("\n YOUR ACCOUNT NUMBER : %s\n", deposite);
+    printf("\n YOUR ACCOUNT NUMBER : %d\n", deposite);
     printf("\n NAME OF THE ACCOUNT HOLDER : MALAMI USMAN\n");
     printf("\n THE BANK NAME : UNITY BANK\n");
-    printf("\n AMOUNT YOU WANT TO DEPOSIT : %s\n", amount3);
+    printf("\n AMOUNT YOU WANT TO DEPOSIT : %d\n", amount3);
     printf("\n PRESS YES TO CONFIRM\n");
-    scanf("%s", &deposit);
+    scanf("%d", &deposit);
     sleep(2);
     printf("\n DEPOSIT SUCCEESSFUL!!!\n");
     printf("\n THANK YOU FOR BANKING WITH US\n");
-    printf("\n PRESS NO TO END THE TRANSACTION \n");
-    scanf("%s", &nos);
-    printf("\n PRESS YES TO GO BACK TO THE MAIN MENU \n");
-    scanf("%s", &yess);
+    printf("\n PRESS 1 TO END THE TRANSACTION \n");
+    scanf("%d", &nos);
+    printf("\n PRESS 2 TO GO BACK TO THE MAIN MENU \n");
+    scanf("%d", &yess);
     break;
   }
 }
