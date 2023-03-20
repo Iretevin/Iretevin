@@ -203,7 +203,7 @@ int cardline()
   printf("\n PLEASE TAKE YOUR RECEIPT\n");
   printf("\n PRESS 1 TO END THE TRANSACTION\n");
   scanf("%d", &no);
-  printf("\n THANK YOU FOR BANKING WITH US\n");
+  printf("\n THANK YOU FOR BANKING WITH US,COME AGAIN NEXT TIME.\n");
   printf("\n PRESS 2 TO GO BACK TO THE MAIN MENU\n");
   scanf("%d", &yeso);
 }
